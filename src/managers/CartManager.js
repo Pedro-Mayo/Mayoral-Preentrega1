@@ -83,7 +83,6 @@ export default class CartManager {
 
 
         const result = this.cartList.find(current => current.id == cId);
-        console.log(result)
 
         if (!result) {
             return { error: "Carrito no encontrado", code: 404 }

@@ -34,7 +34,6 @@ router.post('/:cId/product/:pId', async (req, res)=>{
     const quantity = req.body.quantity;
 
     const result = await cm.addProduct(cId, pId, quantity);
-    console.log("codigo " + result.code)
     if (result.sysError) {
         res.status(500).json({error: result.sysError})
         return
